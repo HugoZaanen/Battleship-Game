@@ -5,11 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Battleship_Game"
         mc:Ignorable="d"
-        Title="BattleShip" Height="450" Width="800">
+        Title="BattleShip" Height="800" Width="900">
 
     <Grid>
-        <Grid x:Name="grid" Width="200" Height="197" HorizontalAlignment="Left" Margin="100,0,0,0">
+        <Grid x:Name="AIGrid" Width="300" Height="300" HorizontalAlignment="Left" Margin="100,0,0,0">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -20,63 +26,262 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button x:Name="Button0_0" Grid.Column="0" Grid.Row="0" Click="Button_Click" ></Button>
+            <Button x:Name="Button0_0" Grid.Column="0" Grid.Row="0" Click="Button_Click"></Button>
             <Button x:Name="Button1_0" Grid.Column="1" Grid.Row="0" Click="Button_Click"></Button>
             <Button x:Name="Button2_0" Grid.Column="2" Grid.Row="0" Click="Button_Click"></Button>
             <Button x:Name="Button3_0" Grid.Column="3" Grid.Row="0" Click="Button_Click"></Button>
+            <Button x:Name="Button4_0" Grid.Column="4" Grid.Row="0" Click="Button_Click"></Button>
+            <Button x:Name="Button5_0" Grid.Column="5" Grid.Row="0" Click="Button_Click"></Button>
+            <Button x:Name="Button6_0" Grid.Column="6" Grid.Row="0" Click="Button_Click" ></Button>
+            <Button x:Name="Button7_0" Grid.Column="7" Grid.Row="0" Click="Button_Click"></Button>
+            <Button x:Name="Button8_0" Grid.Column="8" Grid.Row="0" Click="Button_Click"></Button>
+            <Button x:Name="Button9_0" Grid.Column="9" Grid.Row="0" Click="Button_Click"></Button>
 
             <Button  x:Name="Button0_1" Grid.Column="0" Grid.Row="1" Click="Button_Click"></Button>
             <Button  x:Name="Button1_1" Grid.Column="1" Grid.Row="1" Click="Button_Click"></Button>
             <Button  x:Name="Button2_1" Grid.Column="2" Grid.Row="1" Click="Button_Click"></Button>
             <Button  x:Name="Button3_1" Grid.Column="3" Grid.Row="1" Click="Button_Click"></Button>
+            <Button  x:Name="Button4_1" Grid.Column="4" Grid.Row="1" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_1" Grid.Column="5" Grid.Row="1" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_1" Grid.Column="6" Grid.Row="1" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_1" Grid.Column="7" Grid.Row="1" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_1" Grid.Column="8" Grid.Row="1" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_1" Grid.Column="9" Grid.Row="1" Click="Button_Click"></Button>
 
             <Button  x:Name="Button0_2" Grid.Column="0" Grid.Row="2" Click="Button_Click"></Button>
             <Button  x:Name="Button1_2" Grid.Column="1" Grid.Row="2" Click="Button_Click"></Button>
             <Button  x:Name="Button2_2" Grid.Column="2" Grid.Row="2" Click="Button_Click"></Button>
             <Button  x:Name="Button3_2" Grid.Column="3" Grid.Row="2" Click="Button_Click"></Button>
-
+            <Button  x:Name="Button4_2" Grid.Column="4" Grid.Row="2" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_2" Grid.Column="5" Grid.Row="2" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_2" Grid.Column="6" Grid.Row="2" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_2" Grid.Column="7" Grid.Row="2" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_2" Grid.Column="8" Grid.Row="2" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_2" Grid.Column="9" Grid.Row="2" Click="Button_Click"></Button>
+            
             <Button  x:Name="Button0_3" Grid.Column="0" Grid.Row="3" Click="Button_Click"></Button>
             <Button  x:Name="Button1_3" Grid.Column="1" Grid.Row="3" Click="Button_Click"></Button>
             <Button  x:Name="Button2_3" Grid.Column="2" Grid.Row="3" Click="Button_Click"></Button>
             <Button  x:Name="Button3_3" Grid.Column="3" Grid.Row="3" Click="Button_Click"></Button>
+            <Button  x:Name="Button4_3" Grid.Column="4" Grid.Row="3" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_3" Grid.Column="5" Grid.Row="3" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_3" Grid.Column="6" Grid.Row="3" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_3" Grid.Column="7" Grid.Row="3" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_3" Grid.Column="8" Grid.Row="3" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_3" Grid.Column="9" Grid.Row="3" Click="Button_Click"></Button>
+
+            <Button  x:Name="Button0_4" Grid.Column="0" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button1_4" Grid.Column="1" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button2_4" Grid.Column="2" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button3_4" Grid.Column="3" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button4_4" Grid.Column="4" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_4" Grid.Column="5" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_4" Grid.Column="6" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_4" Grid.Column="7" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_4" Grid.Column="8" Grid.Row="4" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_4" Grid.Column="9" Grid.Row="4" Click="Button_Click"></Button>
+
+            <Button  x:Name="Button0_5" Grid.Column="0" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button1_5" Grid.Column="1" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button2_5" Grid.Column="2" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button3_5" Grid.Column="3" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button4_5" Grid.Column="4" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_5" Grid.Column="5" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_5" Grid.Column="6" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_5" Grid.Column="7" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_5" Grid.Column="8" Grid.Row="5" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_5" Grid.Column="9" Grid.Row="5" Click="Button_Click"></Button>
+
+            <Button  x:Name="Button0_6" Grid.Column="0" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button1_6" Grid.Column="1" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button2_6" Grid.Column="2" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button3_6" Grid.Column="3" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button4_6" Grid.Column="4" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_6" Grid.Column="5" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_6" Grid.Column="6" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_6" Grid.Column="7" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_6" Grid.Column="8" Grid.Row="6" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_6" Grid.Column="9" Grid.Row="6" Click="Button_Click"></Button>
+
+            <Button  x:Name="Button0_7" Grid.Column="0" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button1_7" Grid.Column="1" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button2_7" Grid.Column="2" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button3_7" Grid.Column="3" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button4_7" Grid.Column="4" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_7" Grid.Column="5" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_7" Grid.Column="6" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_7" Grid.Column="7" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_7" Grid.Column="8" Grid.Row="7" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_7" Grid.Column="9" Grid.Row="7" Click="Button_Click"></Button>
+
+            <Button  x:Name="Button0_8" Grid.Column="0" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button1_8" Grid.Column="1" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button2_8" Grid.Column="2" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button3_8" Grid.Column="3" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button4_8" Grid.Column="4" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_8" Grid.Column="5" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_8" Grid.Column="6" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_8" Grid.Column="7" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_8" Grid.Column="8" Grid.Row="8" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_8" Grid.Column="9" Grid.Row="8" Click="Button_Click"></Button>
+
+            <Button  x:Name="Button0_9" Grid.Column="0" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button1_9" Grid.Column="1" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button2_9" Grid.Column="2" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button3_9" Grid.Column="3" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button4_9" Grid.Column="4" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button5_9" Grid.Column="5" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button6_9" Grid.Column="6" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button7_9" Grid.Column="7" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button8_9" Grid.Column="8" Grid.Row="9" Click="Button_Click"></Button>
+            <Button  x:Name="Button9_9" Grid.Column="9" Grid.Row="9" Click="Button_Click"></Button>
         </Grid>
 
-        <Grid Width="200" Height="200" HorizontalAlignment="Right" Margin="0,0,100,0">
+        <Grid x:Name="playerGrid" Width="300" Height="300" HorizontalAlignment="Right" Margin="0,0,100,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                
             </Grid.RowDefinitions>
 
-            <Button x:Name ="buttonPlayer0_0" Grid.Column="0" Grid.Row="0" Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer1_0" Grid.Column="1" Grid.Row="0" Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer2_0" Grid.Column="2" Grid.Row="0" Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer3_0" Grid.Column="3" Grid.Row="0" Click="SelectButton"></Button>
-
-            <Button x:Name ="buttonPlayer0_1" Grid.Column="0" Grid.Row="1"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer1_1" Grid.Column="1" Grid.Row="1"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer2_1" Grid.Column="2" Grid.Row="1"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer3_1" Grid.Column="3" Grid.Row="1"  Click="SelectButton"></Button>
-
-            <Button x:Name ="buttonPlayer0_2" Grid.Column="0" Grid.Row="2"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer1_2" Grid.Column="1" Grid.Row="2"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer2_2" Grid.Column="2" Grid.Row="2"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer3_2" Grid.Column="3" Grid.Row="2"  Click="SelectButton"></Button>
-
-            <Button x:Name ="buttonPlayer0_3" Grid.Column="0" Grid.Row="3"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer1_3" Grid.Column="1" Grid.Row="3"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer2_3" Grid.Column="2" Grid.Row="3"  Click="SelectButton"></Button>
-            <Button x:Name ="buttonPlayer3_3" Grid.Column="3" Grid.Row="3"  Click="SelectButton"></Button>
+            <Button x:Name="playerButton0_0" Grid.Column="0" Grid.Row="0" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_0" Grid.Column="1" Grid.Row="0" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_0" Grid.Column="2" Grid.Row="0" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_0" Grid.Column="3" Grid.Row="0" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_0" Grid.Column="4" Grid.Row="0" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_0" Grid.Column="5" Grid.Row="0" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_0" Grid.Column="6" Grid.Row="0" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_0" Grid.Column="7" Grid.Row="0" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_0" Grid.Column="8" Grid.Row="0" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_0" Grid.Column="9" Grid.Row="0" Click="SelectButton"></Button>
+                                                                                 
+            <Button x:Name="playerButton0_1" Grid.Column="0" Grid.Row="1" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_1" Grid.Column="1" Grid.Row="1" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_1" Grid.Column="2" Grid.Row="1" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_1" Grid.Column="3" Grid.Row="1" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_1" Grid.Column="4" Grid.Row="1" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_1" Grid.Column="5" Grid.Row="1" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_1" Grid.Column="6" Grid.Row="1" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_1" Grid.Column="7" Grid.Row="1" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_1" Grid.Column="8" Grid.Row="1" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_1" Grid.Column="9" Grid.Row="1" Click="SelectButton"></Button>
+                                                                                
+            <Button x:Name="playerButton0_2" Grid.Column="0" Grid.Row="2" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_2" Grid.Column="1" Grid.Row="2" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_2" Grid.Column="2" Grid.Row="2" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_2" Grid.Column="3" Grid.Row="2" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_2" Grid.Column="4" Grid.Row="2" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_2" Grid.Column="5" Grid.Row="2" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_2" Grid.Column="6" Grid.Row="2" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_2" Grid.Column="7" Grid.Row="2" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_2" Grid.Column="8" Grid.Row="2" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_2" Grid.Column="9" Grid.Row="2" Click="SelectButton"></Button>
+                                                                                 
+            <Button x:Name="playerButton0_3" Grid.Column="0" Grid.Row="3" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_3" Grid.Column="1" Grid.Row="3" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_3" Grid.Column="2" Grid.Row="3" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_3" Grid.Column="3" Grid.Row="3" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_3" Grid.Column="4" Grid.Row="3" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_3" Grid.Column="5" Grid.Row="3" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_3" Grid.Column="6" Grid.Row="3" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_3" Grid.Column="7" Grid.Row="3" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_3" Grid.Column="8" Grid.Row="3" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_3" Grid.Column="9" Grid.Row="3" Click="SelectButton"></Button>
+                                                                                 
+            <Button x:Name="playerButton0_4" Grid.Column="0" Grid.Row="4" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_4" Grid.Column="1" Grid.Row="4" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_4" Grid.Column="2" Grid.Row="4" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_4" Grid.Column="3" Grid.Row="4" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_4" Grid.Column="4" Grid.Row="4" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_4" Grid.Column="5" Grid.Row="4" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_4" Grid.Column="6" Grid.Row="4" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_4" Grid.Column="7" Grid.Row="4" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_4" Grid.Column="8" Grid.Row="4" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_4" Grid.Column="9" Grid.Row="4" Click="SelectButton"></Button>
+                                                                                 
+            <Button x:Name="playerButton0_5" Grid.Column="0" Grid.Row="5" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_5" Grid.Column="1" Grid.Row="5" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_5" Grid.Column="2" Grid.Row="5" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_5" Grid.Column="3" Grid.Row="5" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_5" Grid.Column="4" Grid.Row="5" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_5" Grid.Column="5" Grid.Row="5" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_5" Grid.Column="6" Grid.Row="5" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_5" Grid.Column="7" Grid.Row="5" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_5" Grid.Column="8" Grid.Row="5" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_5" Grid.Column="9" Grid.Row="5" Click="SelectButton"></Button>
+                                                                                 
+            <Button x:Name="playerButton0_6" Grid.Column="0" Grid.Row="6" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_6" Grid.Column="1" Grid.Row="6" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_6" Grid.Column="2" Grid.Row="6" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_6" Grid.Column="3" Grid.Row="6" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_6" Grid.Column="4" Grid.Row="6" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_6" Grid.Column="5" Grid.Row="6" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_6" Grid.Column="6" Grid.Row="6" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_6" Grid.Column="7" Grid.Row="6" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_6" Grid.Column="8" Grid.Row="6" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_6" Grid.Column="9" Grid.Row="6" Click="SelectButton"></Button>
+                                                                                 
+            <Button x:Name="playerButton0_7" Grid.Column="0" Grid.Row="7" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_7" Grid.Column="1" Grid.Row="7" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_7" Grid.Column="2" Grid.Row="7" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_7" Grid.Column="3" Grid.Row="7" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_7" Grid.Column="4" Grid.Row="7" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_7" Grid.Column="5" Grid.Row="7" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_7" Grid.Column="6" Grid.Row="7" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_7" Grid.Column="7" Grid.Row="7" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_7" Grid.Column="8" Grid.Row="7" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_7" Grid.Column="9" Grid.Row="7" Click="SelectButton"></Button>
+                                                                                
+            <Button x:Name="playerButton0_8" Grid.Column="0" Grid.Row="8" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_8" Grid.Column="1" Grid.Row="8" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_8" Grid.Column="2" Grid.Row="8" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_8" Grid.Column="3" Grid.Row="8" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_8" Grid.Column="4" Grid.Row="8" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_8" Grid.Column="5" Grid.Row="8" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_8" Grid.Column="6" Grid.Row="8" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_8" Grid.Column="7" Grid.Row="8" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_8" Grid.Column="8" Grid.Row="8" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_8" Grid.Column="9" Grid.Row="8" Click="SelectButton"></Button>
+                                                                                 
+            <Button x:Name="playerButton0_9" Grid.Column="0" Grid.Row="9" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton1_9" Grid.Column="1" Grid.Row="9" Click="SelectButton"></Button>
+            <Button x:Name="playerButton2_9" Grid.Column="2" Grid.Row="9" Click="SelectButton"></Button>
+            <Button x:Name="playerButton3_9" Grid.Column="3" Grid.Row="9" Click="SelectButton"></Button>
+            <Button x:Name="playerButton4_9" Grid.Column="4" Grid.Row="9" Click="SelectButton"></Button>
+            <Button x:Name="playerButton5_9" Grid.Column="5" Grid.Row="9" Click="SelectButton"></Button>
+            <Button x:Name="playerButton6_9" Grid.Column="6" Grid.Row="9" Click="SelectButton" ></Button>
+            <Button x:Name="playerButton7_9" Grid.Column="7" Grid.Row="9" Click="SelectButton"></Button>
+            <Button x:Name="playerButton8_9" Grid.Column="8" Grid.Row="9" Click="SelectButton"></Button>
+            <Button x:Name="playerButton9_9" Grid.Column="9" Grid.Row="9" Click="SelectButton"></Button>
         </Grid>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="127,36,0,0" VerticalAlignment="Top" Width="75" Click="StartButton"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="339,36,0,0" VerticalAlignment="Top" Width="101"/>
     </Grid>
 </Window>
